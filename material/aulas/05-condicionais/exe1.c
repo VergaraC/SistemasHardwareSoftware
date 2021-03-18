@@ -1,4 +1,4 @@
-int igual(int a, int b) {
+int igual(int a) {
 
-    return a == b;
+    return a >10;
 }
