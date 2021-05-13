@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string.h>
 
 /* Standard C */
 #include <stdio.h>
@@ -13,7 +14,7 @@ int main (int argc, char *argv[]) {
     
     scanf("%s", arq1);
     int fd1 = open(arq1, O_RDONLY);
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i <= strlen(arq1); i++) {
         read(fd1, buf, 1);
         printf("Caracter lido: %c\n", buf[0]);
     }
